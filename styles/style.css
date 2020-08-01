@@ -1,0 +1,218 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-text-color: #fff;
+    --text-uppercase: uppercase;
+}
+img{
+    width: 100%;
+}
+.header-content{
+    height: 700px;
+    background: url(../images/header-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-transform: var(--text-uppercase);
+    text-align: center;
+}
+.header-content h1{
+    color: var(--main-text-color);
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+.header-content p{
+    font-size: 16px;
+    color: var(--main-text-color);
+    display: flex;
+    align-items: center;
+}
+.header-content p i{
+    font-size: 6px;
+    display: inline-block;
+    margin: 0 5px;
+}
+.listen-info{
+    text-align: center;
+}
+.listen-info h3{
+    margin-top: 50px;
+    font-size: 30px;
+    text-transform: var(--text-uppercase);
+}
+.listen-info p{
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 170px;
+}
+.listen-music{
+    background: #000;
+    display: flex;
+    justify-content: center;
+}
+.listen-music__image{
+    max-width: 300px;
+    position: relative;
+    top: -150px;
+    text-align: center;
+}
+.listen-music__image h3{
+    font-size: 25px;
+    color: var(--main-text-color);
+    text-transform: var(--text-uppercase);
+    margin-top: 20px;
+}
+.albums{
+    text-align: center;
+    margin-bottom: 220px;
+}
+.albums h3{
+    margin-top: 20px;
+    font-size: 25px;
+    text-transform: var(--text-uppercase);
+}
+.albums h3::after{
+    content: '';
+    display: block;
+    width: 35px;
+    height: 2px;
+    background: gray;
+    margin: 20px auto;
+}
+.albums p {
+    width: 40%;
+    margin: 0 auto;
+}
+.about-me{
+    background: #000;
+    text-align: center;
+    padding-bottom: 220px;
+}
+.slider{
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -195px;
+}
+.slider__prev a,
+.slider__next a{
+    display: block;
+    font-size: 35px;
+    animation: changeColor 4s infinite;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+.sliderLines{
+    box-shadow: 5px 6px 9px #71c496;
+    border-radius: 15px;
+}
+.about-me h3{
+    font-size: 30px;
+    color: var(--main-text-color);
+    text-transform: var(--text-uppercase);
+}
+.about-me h3::after{
+    content: '';
+    display: block;
+    width: 35px;
+    height: 2px;
+    margin: 20px auto;
+    background: gray;
+}
+.about-me p{
+    width: 40%;
+    margin: 0 auto;
+    color: var(--main-text-color);
+}
+.signature{
+    max-width: 200px;
+    width: 100%;
+    color: var(--main-text-color);
+    margin: 20px auto 0;
+    font-size: 30px;
+}
+.greatjen{
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    top: -200px;
+    border-radius: 15px;
+}
+.footer-links{
+    display: flex;
+}
+.footer-links .items img{
+    height: 100%;
+}
+.footer-links .items{
+    width: calc(100%/12*4);
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+.footer-links .items a{
+    z-index: 100;
+}
+.footer-links .items span{
+    position: absolute;
+    color: var(--main-text-color);
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-transform: var(--text-uppercase);
+    font-size: 20px;
+    z-index: 1;
+}
+
+
+@keyframes changeColor{
+    0%{
+        color: gray;
+    }
+    25%{
+        color: rgb(74, 127, 145);
+    }
+    50%{
+        color: red;
+    }
+    100%{
+        color: purple;
+    }
+}
+@media(max-width: 500px){
+    .slider{
+        max-width: 400px;
+        top: -145px;
+    }
+    .footer-links .items span{
+        font-size: 14px
+    }
+    .listen-info p,
+    .albums p,
+    .about-me p{
+        width: 60%;
+    }
+    .header-content h1{
+        font-size: 45px;
+    }
+    .footer-links .items {
+        height: 120px;
+    }
+}
+@media(max-width: 400px){
+    .slider{
+        max-width: 320px;
+        top: -105px;
+    }
+}
