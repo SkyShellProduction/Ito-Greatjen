@@ -19,29 +19,19 @@ img{
 }
 .header-content{
     height: 700px;
-    background-image: url(../images/cleanArt.png);
+    background-image: url(../images/tree.png);
     background-size: cover;
     background-color: #000;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     background-position: -310px center;
-   
     text-align: center;
 }
-.header-content h1,
-.header-content h1 span{
-    color: rgb(145, 157, 133, 0.2);
-    font-size: 60px;
-    margin-bottom: 40px;
-    font-family: "Bleeding Cowboy";
-    background: url(../images/wood.jpg);
-    -webkit-background-clip: text;
-    background-clip: text;
-    background-repeat: no-repeat;
-    background-size: cover;
+.header-content img{
+    width: auto;
 }
 .header-content p{
     font-size: 16px;
@@ -50,10 +40,13 @@ img{
     align-items: center;
     text-transform: var(--text-uppercase);
 }
-.header-content p i{
-    font-size: 6px;
+.header-content p span{
     display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--main-text-color);
     margin: 0 5px;
+    border-radius: 50%;
 }
 .listen-info{
     text-align: center;
@@ -118,20 +111,53 @@ img{
     display: flex;
     align-items: center;
     position: relative;
-    top: -195px;
+    top: -210px;
 }
-.slider__prev a,
-.slider__next a{
-    display: block;
-    font-size: 35px;
-    animation: changeColor 4s infinite;
-    padding: 10px 15px;
+.slider__prev,
+.slider__next{
+    width: 40px;
+    height: 40px;
     cursor: pointer;
+    position: relative;
+}
+.slider__prev{
+    margin-right: 20px;
+}
+.slider__next{
+    margin-left: 15px;
+}
+.slider__prev span,
+.slider__prev i,
+.slider__next span,
+.slider__next i{
+    position: absolute;
+    width: 7px;
+    height: 25px;
+    background: gray;
+    animation: changeColor 4s infinite;
+  
+}
+.slider__next span{
+    transform: rotate(-45deg);
+    top: 0;
+}
+.slider__next i{
+    transform: rotate(45deg) ;
+    bottom: 0;
+}
+.slider__prev span{
+    transform: rotate(45deg);
+    top: 0;
+}
+.slider__prev i{
+    transform: rotate(-45deg);
+    bottom: 0;
 }
 .sliderLines{
     box-shadow: 5px 6px 9px #71c496;
     border-radius: 15px;
 }
+
 .about-me h3{
     font-size: 30px;
     color: var(--main-text-color);
@@ -194,22 +220,22 @@ img{
 
 @keyframes changeColor{
     0%{
-        color: gray;
+        background: gray;
     }
     25%{
-        color: rgb(74, 127, 145);
+        background: rgb(74, 127, 145);
     }
     50%{
-        color: red;
+        background: red;
     }
     100%{
-        color: purple;
+        background: purple;
     }
 }
 @media(max-width: 500px){
     .slider{
         max-width: 400px;
-        top: -145px;
+        top: -167px;
     }
     .footer-links .items span{
         font-size: 14px
@@ -229,6 +255,9 @@ img{
 @media(max-width: 400px){
     .slider{
         max-width: 320px;
-        top: -107px;
+        top: -131px;
+    }
+    .header-content img{
+        width: 100%;
     }
 }
