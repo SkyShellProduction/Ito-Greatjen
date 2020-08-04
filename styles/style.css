@@ -1,4 +1,8 @@
 
+@font-face{
+    font-family: 'Bleeding Cowboy';
+    src: url(Bleeding\ CowboysRUS.ttf);
+}
 *{
     margin: 0;
     padding: 0;
@@ -8,6 +12,7 @@
 :root{
     --main-text-color: #fff;
     --text-uppercase: uppercase;
+    --main-bg: #191919;
 }
 img{
     width: 100%;
@@ -23,19 +28,22 @@ img{
     flex-direction: column;
     justify-content: center;
     background-position: -310px center;
-    text-transform: var(--text-uppercase);
+   
     text-align: center;
 }
-.header-content h1{
-    color: var(--main-text-color);
+.header-content h1,
+.header-content h1 span{
+    color: #919d85;
     font-size: 60px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    font-family: "Bleeding Cowboy";
 }
 .header-content p{
     font-size: 16px;
     color: var(--main-text-color);
     display: flex;
     align-items: center;
+    text-transform: var(--text-uppercase);
 }
 .header-content p i{
     font-size: 6px;
@@ -56,7 +64,7 @@ img{
     margin-bottom: 170px;
 }
 .listen-music{
-    background: #000;
+    background: var(--main-bg);
     display: flex;
     justify-content: center;
 }
@@ -94,7 +102,7 @@ img{
     margin: 0 auto;
 }
 .about-me{
-    background: #000;
+    background: var(--main-bg);
     text-align: center;
     padding-bottom: 220px;
 }
@@ -216,6 +224,6 @@ img{
 @media(max-width: 400px){
     .slider{
         max-width: 320px;
-        top: -105px;
+        top: -107px;
     }
 }
