@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 :root{
     --main-text-color: #fff;
@@ -13,13 +14,15 @@ img{
 }
 .header-content{
     height: 700px;
-    background: url(../images/header-bg.png);
+    background-image: url(../images/cleanArt.png);
     background-size: cover;
+    background-color: #000;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    background-position: -310px center;
     text-transform: var(--text-uppercase);
     text-align: center;
 }
