@@ -33,10 +33,15 @@ img{
 }
 .header-content h1,
 .header-content h1 span{
-    color: #919d85;
+    color: rgb(145, 157, 133, 0.2);
     font-size: 60px;
     margin-bottom: 40px;
     font-family: "Bleeding Cowboy";
+    background: url(../images/wood.jpg);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .header-content p{
     font-size: 16px;
