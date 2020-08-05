@@ -68,3 +68,16 @@ const sliderFisrt = new Slider({
     duration: 400,
     direction: 'x'
 });
+let playAudioBtn = document.querySelector('.play'),
+    playAudio = document.querySelector('.play-music audio');
+playAudioBtn.addEventListener('click', function(e){
+    e.preventDefault();
+    if(playAudio.paused){
+        playAudio.play();
+        playAudioBtn.src = './images/pause.png';
+    }
+    else{
+        playAudio.pause();
+        playAudioBtn.src = './images/play.png';
+    }
+})

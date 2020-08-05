@@ -157,7 +157,23 @@ img{
     box-shadow: 5px 6px 9px #71c496;
     border-radius: 15px;
 }
-
+.play-music{
+    position: relative;
+}
+.play-music audio{
+    display: none;
+}
+.play-music .play{
+    position: absolute;
+    width: auto;
+    cursor: pointer;
+    left: 50%;
+    top: 50%;
+    bottom: 0;
+    right: 0;
+    width: 58px;
+    transform: translateX(-50%) translateY(-50%);
+}
 .about-me h3{
     font-size: 30px;
     color: var(--main-text-color);
