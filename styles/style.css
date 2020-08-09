@@ -1,13 +1,9 @@
 
-@font-face{
-    font-family: 'DS Standart';
-    src: url(DS\ Standart.ttf);
-}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'DS Standart', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 :root{
     --main-text-color: #fff;
@@ -61,6 +57,7 @@ img{
     top: 0;
     background: #000;
     display: none;
+    overflow: hidden;
 }
 .listen-info h3{
     padding-top: 50px;
@@ -222,10 +219,9 @@ img{
 .signature{
     max-width: 200px;
     width: 100%;
-    color: var(--main-text-color);
     margin: 20px auto 0;
-    font-size: 30px;
 }
+
 .greatjen{
     max-width: 500px;
     width: 100%;
