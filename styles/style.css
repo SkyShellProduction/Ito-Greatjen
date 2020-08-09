@@ -1,13 +1,13 @@
 
 @font-face{
-    font-family: 'Bleeding Cowboy';
-    src: url(Bleeding\ CowboysRUS.ttf);
+    font-family: 'DS Standart';
+    src: url(DS\ Standart.ttf);
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'DS Standart', sans-serif;
 }
 :root{
     --main-text-color: #fff;
@@ -17,6 +17,7 @@
 img{
     width: 100%;
 }
+
 .header-content{
     height: 700px;
     background-image: url(../images/tree.png);
@@ -50,16 +51,26 @@ img{
 }
 .listen-info{
     text-align: center;
+    position: relative;
+}
+.listen-info .abs{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: #000;
+    display: none;
 }
 .listen-info h3{
-    margin-top: 50px;
+    padding-top: 50px;
     font-size: 30px;
     text-transform: var(--text-uppercase);
 }
 .listen-info p{
     width: 40%;
     margin: 0 auto;
-    margin-bottom: 170px;
+    padding-bottom: 170px;
 }
 .listen-music{
     background: var(--main-bg);
@@ -82,8 +93,9 @@ img{
     text-align: center;
     margin-bottom: 220px;
 }
+
 .albums h3{
-    margin-top: 20px;
+    padding-top: 20px;
     font-size: 25px;
     text-transform: var(--text-uppercase);
 }
@@ -107,11 +119,29 @@ img{
 .slider{
     max-width: 500px;
     width: 100%;
+    max-height: 500px;
     margin: 0 auto;
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
-    top: -210px;
+    top: -150px;
+}
+.sliderLines{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    perspective: 1200px; 
+}
+.slider__content{
+    position: absolute;
+    overflow: hidden;
+}
+.slider__img{
+    height: 100%;
+}
+.slider__img img{
+    height: 100%;
 }
 .slider__prev,
 .slider__next{
@@ -119,6 +149,7 @@ img{
     height: 40px;
     cursor: pointer;
     position: relative;
+    z-index: 10;
 }
 .slider__prev{
     margin-right: 20px;
@@ -152,10 +183,6 @@ img{
 .slider__prev i{
     transform: rotate(-45deg);
     bottom: 0;
-}
-.sliderLines{
-    box-shadow: 5px 6px 9px #71c496;
-    border-radius: 15px;
 }
 .play-music{
     position: relative;
@@ -232,7 +259,7 @@ img{
     font-size: 20px;
     z-index: 1;
 }
-
+/* music animation */
 
 @keyframes changeColor{
     0%{
@@ -248,10 +275,20 @@ img{
         background: purple;
     }
 }
+@media(max-width: 996px){
+    .sliderLines{
+       overflow: hidden;
+       perspective: none;
+    }
+    .slider__content{
+        transform: rotate(0);
+        filter: none;
+    }
+}
 @media(max-width: 500px){
     .slider{
         max-width: 400px;
-        top: -167px;
+        top: -150px;
     }
     .footer-links .items span{
         font-size: 14px
@@ -271,7 +308,11 @@ img{
 @media(max-width: 400px){
     .slider{
         max-width: 320px;
-        top: -131px;
+        top: -125px;
+    }
+    .sliderLines{
+        width: 250px;
+        height: 250px;
     }
     .header-content img{
         width: 100%;
